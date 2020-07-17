@@ -16,7 +16,7 @@ function feetToMile(feetValue) {
 
 
 // 1st problem - feet to mile conversion output code starts
-resultFeetToMile = feetToMile(10000);   // give input value in inch 
+resultFeetToMile = feetToMile(10000);   // give input value in feet
 if (resultFeetToMile >= 0) {
     console.log(resultFeetToMile);
 }
