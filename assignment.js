@@ -1,7 +1,4 @@
 // 1st problem - feet to mile conversion starts
-
-
-
 // 1st problem - feet to mile conversion function starts
 function feetToMile(feetValue) {
     if (feetValue < 0) {
@@ -19,19 +16,21 @@ function feetToMile(feetValue) {
 
 
 // 1st problem - feet to mile conversion output code starts
-resultFeetToMile = feetToMile(1000);   // give input value in inch 
+resultFeetToMile = feetToMile(10000);   // give input value in inch 
 if (resultFeetToMile >= 0) {
     console.log(resultFeetToMile);
 }
+// 1st problem - feet to mile conversion output code ends
 // 1st problem - feet to mile conversion ends
 
 
 
 
+
+
+
+
 // 2nd problem -  wood calculator starts
-
-
-
 // 2nd problem - wood calculator function starts
 
 function woodCalculator(chairQuantity, tableQuantity, bedQuantity) {
@@ -41,6 +40,7 @@ function woodCalculator(chairQuantity, tableQuantity, bedQuantity) {
         var checkFractionQuantity = 0;
     if (checkNegativeCounter == 0 || checkFractionQuantity == 0)
         return console.log('Invalid Input Given !!');
+    //invalid input checkpoint
     else {
         var totalWoodQuantity = chairQuantity * 1 + tableQuantity * 3 + bedQuantity * 5;
         return totalWoodQuantity;
@@ -50,16 +50,17 @@ function woodCalculator(chairQuantity, tableQuantity, bedQuantity) {
 }
 // 2nd problem - wood calculator function ends
 
-
-
 // 2nd problem -  wood calculator output code starts
-resultTotalWoodQuantity = woodCalculator(3, 5, 10); // Give input in 'x' form , not in 'x.0' form
+resultTotalWoodQuantity = woodCalculator(3, 5, 10); // Give input in 'x' form , not in 'x.0' form , input of chair,table,bed no
 if (resultTotalWoodQuantity >= 0) {
     console.log(resultTotalWoodQuantity);
 }
-
-
 // 2nd problem -  wood calculator ends
+
+
+
+
+
 
 
 // 3rd problem -  brick calculator starts
@@ -87,7 +88,7 @@ function brickCalculator(numberOfFloor) {
         }
 
 
-        var totalBricksCount = floorTotalHeight * 1000;
+        var totalBricksCount = floorTotalHeight * 1000; // per unit height , bricks number is 1000
         return totalBricksCount;
     }
 
@@ -95,60 +96,51 @@ function brickCalculator(numberOfFloor) {
 
 }
 
-
 // 3rd problem -  brick calculator function ends
-
-
 // 3rd problem -  brick calculator output code starts
-resultBrickCalculator = brickCalculator(100);  // Input 
+resultBrickCalculator = brickCalculator(30);  // Input of floor number
 if (resultBrickCalculator >= 0) {
     console.log(resultBrickCalculator);
 }
-
 // 3rd problem -  brick calculator output code ends
 // 3rd problem -  brick calculator ends
 
 
-// 4th problem - tiny name returning starts
 
+
+
+
+
+
+// 4th problem - tiny name returning starts
 // 4th problem - tiny name returning function starts
 
 function tinyFriend(friendNames) {
     var tinyFriendNameLength = friendNames[0].length;
     var tinyFriendName = friendNames[0];
-
-    var friendNameIndex = friendNames.length;
-    while (friendNames[friendNameIndex - 1] == "") {
+    var friendNameIndex = friendNames.length - 1;
+    while (friendNames[friendNameIndex] == '') {
         friendNameIndex--;
     }
-
-
-    for (var i = 1; i < friendNameIndex; i++) {
-
+    var newLength = friendNameIndex;
+    for (let i = 1; i <= newLength; i++) {
         if (tinyFriendNameLength == 0) {
-
             tinyFriendNameLength = friendNames[i].length;
         }
-
         if (tinyFriendNameLength >= friendNames[i].length) {
-
             tinyFriendNameLength = friendNames[i].length;
-
             tinyFriendName = friendNames[i];
         }
-
     }
-
-
     return tinyFriendName;
+
 }
+
 // 4th problem - tiny name returning function  ends
-
-
-
 // 4th problem - tiny name returning ouput code starts 
-resultTinyFriend = tinyFriend(["","M","Tahia", "Rifa","", "","Zim","Aroshi","Tahmin","Mim","Mimo","",""]); //input of friends' names
-console.log(resultTinyFriend);
-// 4th problem - tiny name returning ouput code ends
+let friendsList = ['', '', 'tahia', 'ria', 'zimi', 'aroshi', 'tahmin', 'tahia', 'mimo', '', '']; //input of friends' names , no inside blank element please
+console.log(tinyFriend(friendsList));
 
+// 4th problem - tiny name returning ouput code ends
 // 4th problem - tiny name returning ends
+
